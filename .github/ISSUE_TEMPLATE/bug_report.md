@@ -5,14 +5,19 @@ title: "[مشكلة] "
 labels: bug
 ---
 
-**📎 أرفق ملف التقرير / Attach the report file**
-من البرنامج: «حول» ← «إرسال تقرير مشكلة». يُحفظ ملف `Mohaskull-Report-....zip` على سطح المكتب: اسحبه إلى هنا.
-In the app: About → Report a problem. Drag the `Mohaskull-Report-....zip` file from your desktop here.
+<div dir="rtl">
 
-**ماذا حدث؟ / What happened?**
+**📎 أرفق ملف التقرير:** من البرنامج: «حول» ← «إرسال تقرير مشكلة». يُحفظ ملف ZIP على سطح المكتب، اسحبه إلى هنا.
 
+**ماذا حدث؟**
 
-**ماذا كنت تتوقع؟ / What did you expect?**
+**ماذا كنت تتوقع؟**
 
+**اللعبة (إن وُجدت):**
 
-**اللعبة (إن وُجدت) / Game (if any):**
+</div>
+
+---
+
+**📎 Attach the report file:** in the app, About → Report a problem, then drag the ZIP file from your desktop here.
+**What happened? What did you expect? Which game?**
