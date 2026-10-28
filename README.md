@@ -40,7 +40,7 @@
 | الملف | لمن؟ |
 |---|---|
 | **`Mohaskull-Game-Booster-Setup.exe`** ⭐ | مثبّت كامل: اختصار في قائمة ابدأ، وإلغاء تثبيت من إعدادات ويندوز **يرجع كل الإعدادات كما كانت** |
-| `Mohaskull.Game.Booster.exe` | نسخة محمولة بدون تثبيت: ضعها في مجلد خاص بها وشغّلها |
+| `Mohaskull-Game-Booster-Portable.exe` | نسخة محمولة بدون تثبيت: ضعها في مجلد خاص بها وشغّلها |
 
 إذا ظهرت رسالة **Windows protected your PC** اضغط **More info** ثم **Run anyway**. بعدها شغّل أي لعبة، والبرنامج يتولى الباقي.
 
@@ -64,7 +64,7 @@ Every session is recorded and diagnosed, so you learn *why* you got stutters or 
 - One-click auto updates.
 
 **Install:** download `Mohaskull-Game-Booster-Setup.exe` (recommended: Start menu shortcut, and uninstalling restores every Windows setting)
-or the portable `Mohaskull.Game.Booster.exe` from the [latest release](../../releases/latest).
+or the portable `Mohaskull-Game-Booster-Portable.exe` from the [latest release](../../releases/latest).
 Found a bug? In the app: About → **Report a problem**, then attach the file to a [new issue](../../issues/new/choose).
 
 **Requirements:** Windows 10/11 64-bit, administrator rights. CPU temperature and thermal features need an MSI laptop.
