@@ -34,12 +34,19 @@
 | حرارة المعالج، الوضع الحراري الذكي، Cooler Boost | لابتوبات MSI |
 | أوفركلوك الكرت | يحتاج MSI Afterburner (متوقف افتراضياً) |
 
-## 🚀 التشغيل
-1. حمّل `Mohaskull.Game.Booster.exe` من [آخر إصدار](../../releases/latest)، وضعه في مجلد خاص به.
-2. شغّله. إذا ظهرت رسالة **Windows protected your PC** اضغط **More info** ثم **Run anyway**.
-3. شغّل أي لعبة، والبرنامج يتولى الباقي.
+## 🚀 التثبيت
+من [آخر إصدار](../../releases/latest) حمّل أحد الملفين:
+
+| الملف | لمن؟ |
+|---|---|
+| **`Mohaskull-Game-Booster-Setup.exe`** ⭐ | مثبّت كامل: اختصار في قائمة ابدأ، وإلغاء تثبيت من إعدادات ويندوز **يرجع كل الإعدادات كما كانت** |
+| `Mohaskull.Game.Booster.exe` | نسخة محمولة بدون تثبيت: ضعها في مجلد خاص بها وشغّلها |
+
+إذا ظهرت رسالة **Windows protected your PC** اضغط **More info** ثم **Run anyway**. بعدها شغّل أي لعبة، والبرنامج يتولى الباقي.
 
 **التحديثات تلقائية:** عند صدور إصدار جديد يظهر زر «تحديث» أعلى نافذة البرنامج. اضغطه فيتحدث البرنامج ويعيد تشغيل نفسه.
+
+**واجهت مشكلة؟** من البرنامج: «حول» ← **«إرسال تقرير مشكلة»**. يجهّز ملفاً على سطح المكتب ويفتح صفحة [الإبلاغ](../../issues/new/choose) لترفقه.
 
 ## 🔒 الخصوصية
 كل البيانات تبقى على جهازك، والبرنامج لا يرسل أي معلومات. اتصاله بالإنترنت فقط لقياس البنق (إلى 1.1.1.1) وفحص التحديثات من GitHub.
@@ -55,6 +62,10 @@ Every session is recorded and diagnosed, so you learn *why* you got stutters or 
 - Pro overlay with 6 styles, plus in-game overlay through RivaTuner.
 - No kernel driver, so it is safe with anti-cheat (Vanguard and others).
 - One-click auto updates.
+
+**Install:** download `Mohaskull-Game-Booster-Setup.exe` (recommended: Start menu shortcut, and uninstalling restores every Windows setting)
+or the portable `Mohaskull.Game.Booster.exe` from the [latest release](../../releases/latest).
+Found a bug? In the app: About → **Report a problem**, then attach the file to a [new issue](../../issues/new/choose).
 
 **Requirements:** Windows 10/11 64-bit, administrator rights. CPU temperature and thermal features need an MSI laptop.
 GPU readings: full on NVIDIA, usage and memory on AMD / Intel.
