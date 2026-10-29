@@ -1,0 +1,69 @@
+name: Discord release announcement
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" = "release" ]; then
+            jq '.release' "$GITHUB_EVENT_PATH" > release.json
+          else
+            gh api "repos/${{ github.repository }}/releases/latest" > release.json
+          fi
+
+      - name: Send to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "DISCORD_WEBHOOK_URL secret is missing" >&2
+            exit 1
+          fi
+          python3 - <<'EOF'
+          import json, re, html
+
+          r = json.load(open("release.json", encoding="utf-8"))
+          body = r.get("body") or ""
+          body = re.sub(r"<[^>]+>", "", body)
+          body = html.unescape(body)
+          body = re.sub(r"\n{3,}", "\n\n", body).strip()
+          if len(body) > 3500:
+              body = body[:3500].rsplit("\n", 1)[0] + "\n..."
+
+          assets = {a["name"]: a["browser_download_url"] for a in r.get("assets", [])}
+          links = []
+          for label, name in [("Setup", "Mohaskull-Game-Booster-Setup.exe"),
+                              ("Portable", "Mohaskull-Game-Booster-Portable.exe")]:
+              if name in assets:
+                  links.append(f"[{label}]({assets[name]})")
+
+          fields = []
+          if links:
+              fields.append({"name": "⬇️ التحميل", "value": "  •  ".join(links), "inline": False})
+
+          payload = {
+              "username": "Mohaskull Game Booster",
+              "content": "@everyone",
+              "allowed_mentions": {"parse": ["everyone"]},
+              "embeds": [{
+                  "title": f"🚀 تحديث جديد {r['tag_name']}",
+                  "url": r["html_url"],
+                  "description": body,
+                  "color": 0x00A8FF,
+                  "fields": fields,
+                  "footer": {"text": "Mohaskull Game Booster"},
+                  "timestamp": r.get("published_at"),
+              }],
+          }
+          json.dump(payload, open("payload.json", "w", encoding="utf-8"), ensure_ascii=False)
+          EOF
+          curl -sS -f -H "Content-Type: application/json" -d @payload.json "$DISCORD_WEBHOOK_URL"
