@@ -1,23 +1,18 @@
 ---
-name: 🐞 الإبلاغ عن مشكلة / Bug report
-about: البرنامج لم يعمل كما يجب / Something did not work
-title: "[مشكلة] "
+name: مشكلة / Bug
+about: شيء ما اشتغل صح / Something isn't working
+title: ""
 labels: bug
 ---
 
 <div dir="rtl">
 
-**📎 أرفق ملف التقرير:** من البرنامج: «حول» ← «إرسال تقرير مشكلة». يُحفظ ملف ZIP على سطح المكتب، اسحبه إلى هنا.
+**وش صار؟**
 
-**ماذا حدث؟**
 
-**ماذا كنت تتوقع؟**
+**اللعبة (إذا فيه):**
 
-**اللعبة (إن وُجدت):**
+
+ارفق ملف التقرير من البرنامج: «حول» ← «إرسال تقرير مشكلة».
 
 </div>
-
----
-
-**📎 Attach the report file:** in the app, About → Report a problem, then drag the ZIP file from your desktop here.
-**What happened? What did you expect? Which game?**
