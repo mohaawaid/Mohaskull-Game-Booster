@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohaawaid.github.io/Mohaskull-Game-Booster/sitemap.xml
