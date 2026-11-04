@@ -6,6 +6,8 @@
 
 <p align="center">
   <a href="../../releases/latest"><b>تحميل / Download</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://mohaawaid.github.io/Mohaskull-Game-Booster/"><b>الموقع / Website</b></a>
 </p>
 
 <div dir="rtl">
