@@ -36,6 +36,8 @@ jobs:
           body = re.sub(r"<[^>]+>", "", body)
           body = html.unescape(body)
           body = re.sub(r"\n{3,}", "\n\n", body).strip()
+          if not body:
+              raise SystemExit("Release notes are empty: not posting. Edit the release, then run this workflow by hand.")
           if len(body) > 3500:
               body = body[:3500].rsplit("\n", 1)[0] + "\n..."
 
